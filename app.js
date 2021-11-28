@@ -22,28 +22,28 @@ const Const = (value) => {
 }
 
 const Plus = (left, right) => {
-  const toString = () => `${left.toString()} + ${right.toString()}`
+  const toString = () => `(${left.toString()} + ${right.toString()})`
   const result = () => left.result() + right.result()
 
   return { toString, result }
 }
 
 const Multiply = (left, right) => {
-  const toString = () => `${left.toString()} x ${right.toString()}`
+  const toString = () => `(${left.toString()} x ${right.toString()})`
   const result = () => left.result() * right.result()
 
   return { toString, result }
 }
 
 const Divide = (left, right) => {
-  const toString = () => `${left.toString()} ÷ ${right.toString()}`
+  const toString = () => `(${left.toString()} ÷ ${right.toString()})`
   const result = () => left.result() / right.result()
 
   return { toString, result }
 }
 
 const Subtract = (left, right) => {
-  const toString = () => `${left.toString()} - ${right.toString()}`
+  const toString = () => `(${left.toString()} - ${right.toString()})`
   const result = () => left.result() - right.result()
 
   return { toString, result }
