@@ -1,6 +1,6 @@
 /**
  * operations can be written as trees
- * for example: 3 * 2 + 1
+ * for example: 3 x 2 + 1
  * this could be expressed as
  *           +
  *       /       \
@@ -14,12 +14,33 @@
  */
 
 // represents numbers. e.g. 1,5,2
-const Const = (value) => {}
+const Const = (value) => {
+  const toString = () => `${value}`
 
-const Plus = (left, right) => {}
+  return { toString }
+}
 
-const Multiply = (left, right) => {}
+const Plus = (left, right) => {
+  const toString = () => `${left.toString()} + ${right.toString()}`
 
-const Divide = (left, right) => {}
+  return { toString }
+}
 
-const Subtract = (left, right) => {}
+const Multiply = (left, right) => {
+  const toString = () => `${left.toString()} x ${right.toString()}`
+
+  return { toString }
+}
+
+const Divide = (left, right) => {
+  const toString = () => `${left.toString()} / ${right.toString()}`
+
+  return { toString }
+}
+
+const Subtract = (left, right) => {
+  const toString = () => `${left.toString()} - ${right.toString()}`
+
+  return { toString }
+}
+
