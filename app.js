@@ -16,31 +16,35 @@
 // represents numbers. e.g. 1,5,2
 const Const = (value) => {
   const toString = () => `${value}`
+  const result = () => value
 
-  return { toString }
+  return { toString, result }
 }
 
 const Plus = (left, right) => {
   const toString = () => `${left.toString()} + ${right.toString()}`
+  const result = () => left.result() + right.result()
 
-  return { toString }
+  return { toString, result }
 }
 
 const Multiply = (left, right) => {
   const toString = () => `${left.toString()} x ${right.toString()}`
+  const result = () => left.result() * right.result()
 
-  return { toString }
+  return { toString, result }
 }
 
 const Divide = (left, right) => {
-  const toString = () => `${left.toString()} / ${right.toString()}`
+  const toString = () => `${left.toString()} ÷ ${right.toString()}`
+  const result = () => left.result() / right.result()
 
-  return { toString }
+  return { toString, result }
 }
 
 const Subtract = (left, right) => {
   const toString = () => `${left.toString()} - ${right.toString()}`
+  const result = () => left.result() - right.result()
 
-  return { toString }
+  return { toString, result }
 }
-
