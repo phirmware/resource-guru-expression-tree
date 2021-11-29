@@ -60,3 +60,11 @@ const tree = Divide(Plus(Const(7), Multiply(Subtract(Const(3), Const(2)), Const(
 
 assert.strictEqual("((7 + ((3 - 2) x 5)) ÷ 6)", tree.toString())
 assert.strictEqual(2, tree.result())
+
+module.exports = {
+  Const,
+  Plus,
+  Multiply,
+  Divide,
+  Subtract
+}
