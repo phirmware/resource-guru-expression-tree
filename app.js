@@ -1,3 +1,5 @@
+const assert = require('assert')
+
 /**
  * operations can be written as trees
  * for example: 3 x 2 + 1
@@ -48,3 +50,13 @@ const Subtract = (left, right) => {
 
   return { toString, result }
 }
+
+/**
+ * The expression ((7 + ((3 - 2) x 5)) ÷ 6) can be expressed as a tree 
+ * in a more readable way: e.g
+ * 
+ */
+const tree = Divide(Plus(Const(7), Multiply(Subtract(Const(3), Const(2)), Const(5))), Const(6))
+
+assert.strictEqual("((7 + ((3 - 2) x 5)) ÷ 6)", tree.toString())
+assert.strictEqual(2, tree.result())
